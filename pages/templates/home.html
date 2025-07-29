@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>{% trans "Welcome to Highland Cultural Heritage Research Centre" %}</h1>
+    <p>{% trans "Our aim is to identify, explore and preserve the cultural heritage in the mountainous regions of Georgia. Also, to promote them and introduce to the public, in order to support the development of educational tourism." %}</p>
+    <button class="btn btn-primary" 
+            hx-get="{% url 'about_partial' %}" 
+            hx-target="#content-section" 
+            hx-swap="innerHTML">
+        Load About Section
+    </button>
+
+    <div id="content-section" class="mt-4"></div>
+</div>
+{% endblock %}
