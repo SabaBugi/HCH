@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HCH Admin Dashboard</title>
+
+  <!-- Sneat Core CSS -->
+  <link rel="stylesheet" href="{% static 'css/core.css' %}">
+  <link rel="stylesheet" href="{% static 'css/theme-default.css' %}">
+  <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+
+  <!-- Helpers -->
+  <script src="{% static 'js/helpers.js' %}"></script>
+</head>
+
+<body>
+  {% include "partials/sidebar.html" %}
+  <div class="layout-page">
+    {% include "partials/navbar.html" %}
+    <div class="content-wrapper">
+      {% block content %}
+      <h4>Welcome to your custom admin dashboard!</h4>
+      {% endblock %}
+    </div>
+  </div>
+
+  <!-- Core JS -->
+  <script src="{% static 'js/core.js' %}"></script>
+</body>
+</html>
