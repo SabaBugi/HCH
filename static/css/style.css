@@ -455,3 +455,59 @@ footer .social-icons a.instagram {
   opacity: 0.85;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #111;
+    width: 220px;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
