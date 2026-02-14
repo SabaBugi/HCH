@@ -74,10 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById("nav-menu");
 
   hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");  // toggle visibility
+    hamburger.classList.toggle("active"); // optional: animate hamburger
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("active"); // ensures menu is hidden initially
+});
+
+
+
 
 
