@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ka">
 <head>
@@ -7,43 +6,42 @@
   <title>მთის კულტურული მემკვიდრეობის კვლევის ცენტრი</title>
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
-</head>
-<body>
-  <!-- Navigation -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="/">
-          <img src="/static/img/logo.png" alt="HCH Logo">
-          <span class="logo-text">მთის კულტურული მემკვიდრეობის კვლევის ცენტრი</span>
-        </a>
-      </div>
-      <nav>
-        <a href="#goals">მიზნები</a>
-        <a href="#services">სერვისები</a>
-        <a href="#contact">კონტაქტი</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-  
-<!DOCTYPE html>
-<html lang="ka">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>მთის კულტურული მემკვიდრეობის კვლევის ცენტრი</title>
-  <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-  <main>
-    <!-- Hero / About -->
-     <!-- 
-      <h1>მოგესალმებით</h1>
-      <p><p>კეთილი იყოს თქვენი მობრძანება მთის კულტურული მემკვიდრეობის კვლევის ცენტრის ოფიციალურ ვებგვერდზე.</p></p>
-     -->
 
-    <section id="about" class="section hero reveal">
+  <!-- SEO -->
+  <link rel="alternate" hreflang="ka" href="https://hch.ge/ka/">
+  <link rel="alternate" hreflang="en" href="https://hch.ge/en/">
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a href="/ka">
+        <img src="/static/img/logo.png" alt="HCH Logo">
+        <span class="logo-text">
+          მთის კულტურული მემკვიდრეობის კვლევის ცენტრი
+        </span>
+      </a>
+    </div>
+
+    <nav>
+      <a href="#goals">მიზნები</a>
+      <a href="#services">სერვისები</a>
+      <a href="#contact">კონტაქტი</a>
+    </nav>
+
+    <div class="language-switcher">
+      <a href="/en/" class="flag-link" title="English">
+        <img src="/static/img/flags/uk.svg" alt="English">
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about" class="section hero reveal">
       <div class="container">
         <h1 class="reveal">მოგესალმებით</h1>
         <p class="reveal"><p>კეთილი იყოს თქვენი მობრძანება მთის კულტურული მემკვიდრეობის კვლევის ცენტრის ოფიციალურ ვებგვერდზე.</p></p>
@@ -158,22 +156,21 @@
           <div class="form-group">
             <label for="id_message">შეტყობინება</label>
             <textarea name="message" cols="40" rows="10" required id="id_message">
-</textarea>
+            </textarea>
           </div>
           <button type="submit">გაგზავნა</button>
         </form>
       </div>
     </section>
-  </main>
 
-  <!-- Scroll reveal script -->
-  <script src="/static/js/main.js"></script>
+</main>
 
-</body>
-</html>
+<footer>
+  <div class="footer">
 
-  </main>
-  <footer class="reveal">
+    
+
+<footer class="reveal">
     <div class="footer-container">
       <div class="social-icons">
         <a href="https://www.facebook.com/HCH.GE/" target="_blank" class="facebook">
@@ -185,58 +182,8 @@
       </div>
       <p>ყველა უფლება დაცულია &copy; 2025 მთის კულტურული მემკვიდრეობის კვლევის ცენტრი</p>
     </div>
-  </footer>
+</footer>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const navLinks = document.querySelectorAll("header nav a");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const headerHeight = header.offsetHeight;
-        const sectionHeight = targetElement.offsetHeight;
-        const viewportHeight = window.innerHeight;
-        const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-        let scrollToPosition;
-        if (sectionHeight < viewportHeight) {
-          // Center short sections
-          const offset = (viewportHeight - sectionHeight) / 2;
-          scrollToPosition = elementTop - offset - headerHeight / 2;
-        } else {
-          // Top-align tall sections
-          scrollToPosition = elementTop - headerHeight - 10; // small extra padding
-        }
-
-        window.scrollTo({
-          top: scrollToPosition,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
-
-  // Optional: reveal elements when they enter viewport
-  const revealElements = document.querySelectorAll(".reveal");
-  const revealOnScroll = () => {
-    const windowHeight = window.innerHeight;
-    revealElements.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight * 0.85) {
-        el.classList.add("active");
-      }
-    });
-  };
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // trigger on page load
-});
-</script>
-
+<script src="/static/js/main.js"></script>
 </body>
 </html>
